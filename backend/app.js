@@ -26,12 +26,12 @@ app.use(fileUpload({
 
 // Set up CORS to allow requests from your frontend origin
 app.use(cors({
-  origin: 'http://localhost:3000',  // Replace with the actual origin of your frontend
+  origin: 'https://hanistyles.com',  // Replace with the actual origin of your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
 
-// https://hanistyles.com/
+// https://hanistyles.com
 
 // Route Imports
 const product = require("./routes/productRoute");
