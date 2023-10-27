@@ -1,0 +1,105 @@
+/* Navbar button styles */
+.menu-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      font-size: 3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #08ee9e;
+      transition: all 0.3s ease-in-out;
+      animation: alternate-reverse;
+    }
+    
+    .menu-icon.active {
+      color: #fff;
+    }
+    
+    /* Navbar styles */
+    .navbar {
+      background: #ffffff;
+      /* position: fixed; */
+      position: absolute;
+      top: -5rem;
+      left: -100%;
+      width: 100%;
+      margin-bottom: 5rem;
+      height: max-content;
+      overflow-y: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.7s ease-in-out;
+      z-index: 1000;
+    }
+    
+    .navbar.active {
+      left: 0;
+    }
+    
+   
+    
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      /* flex-direction: column; */
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .nav-item {
+      margin: 15px;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .navbar.active .nav-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .nav-item a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-item a:hover {
+      color: #007BFF;
+      font-size: 20px;
+    }
+    
+    .logo {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 24px;
+    }
+  
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+      .navbar {
+        left: -100%;
+      }
+      .navbar.active {
+        left: 0;
+      }
+      .nav-list {
+            /* list-style: none;
+            display: flex; */
+            flex-direction: column;
+            padding: 20px;
+            
+            /* align-items: center;
+            margin-top: 100px; */
+          }
+          
+    }
+    
